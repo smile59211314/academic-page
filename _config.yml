@@ -1,0 +1,18 @@
+title: Zifeng Gong — Academic Homepage
+description: Academic homepage of Zifeng Gong, lecturer and researcher in electrical machines, intelligent diagnostics, and data-driven dynamics.
+url: https://smile59211314.github.io
+baseurl: /academic-page
+repository: smile59211314/academic-page
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - node_modules
+  - academic-homepage

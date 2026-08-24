@@ -1,0 +1,87 @@
+---
+layout: default
+title: Home
+description: Academic homepage of Zifeng Gong, lecturer and researcher in electrical machines, intelligent diagnostics, and data-driven dynamics.
+---
+
+{% assign p = site.data.profile %}
+{% assign selected = site.data.publications | where: "selected", true %}
+
+<main>
+  <section class="hero" id="top">
+    <div class="portrait-frame">
+      <img src="{{ p.portrait | relative_url }}" alt="Portrait of {{ p.name }}">
+      <span class="portrait-index">01</span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Electrical engineering · intelligent diagnostics</p>
+      <h1>Zifeng<br>Gong<span>.</span></h1>
+      <p class="role">{{ p.title }} at the {{ p.department }}, {{ p.affiliation }}.</p>
+      <p class="intro">{{ p.bio }}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#publications">Explore my work <span aria-hidden="true">↘</span></a>
+        <a class="button secondary" href="mailto:{{ p.email }}">Get in touch</a>
+      </div>
+    </div>
+    <aside class="hero-note" aria-label="Research profile summary">
+      <span class="note-label">Currently</span>
+      <strong>{{ p.location }}</strong><p>{{ p.title }} · NCUT</p>
+      <span class="note-rule"></span>
+      <span class="note-label">Previously</span>
+      <strong>KU Leuven</strong><p>PhD · 2021—2025</p>
+    </aside>
+  </section>
+
+  <section class="signal-bar" aria-label="Academic profile at a glance">
+    <div><strong>{{ site.data.publications.size }}</strong><span>Research works</span></div>
+    <div><strong>2025</strong><span>PhD · KU Leuven</span></div>
+    <div><strong>2026—</strong><span>Lecturer · NCUT</span></div>
+    <a href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noreferrer"><strong class="signal-id">iD</strong><span>{{ p.orcid }} ↗</span></a>
+  </section>
+
+  <section class="research-strip" id="research">
+    <div class="section-intro light">
+      <p class="section-kicker">Research focus</p>
+      <h2>Models that reveal.<br>Methods that endure.</h2>
+      <p>{{ p.research_intro }}</p>
+    </div>
+    <div class="focus-grid">
+      <article><span>01</span><h3>Electrical machine modelling</h3><p>Fast, interpretable models that retain meaningful machine physics.</p></article>
+      <article><span>02</span><h3>Condition monitoring</h3><p>Fault signatures for eccentricity, bearings, and coupled dynamics.</p></article>
+      <article><span>03</span><h3>Data-driven dynamics</h3><p>Koopman and reduced-order methods for control-ready prediction.</p></article>
+    </div>
+  </section>
+
+  <section class="profile-section" id="profile">
+    <div class="profile-statement">
+      <p class="section-kicker">Profile</p>
+      <p class="statement">I work at the intersection of <em>electromagnetics</em>, <em>machine dynamics</em>, and <em>intelligent control</em>—from magnetic equivalent circuits to physics-informed Koopman operators.</p>
+      <p class="profile-body">This research spans eccentricity and bearing fault modelling, multiphysics coupling, reduced-order system identification, and sensor fault-tolerant control for electrical machines and power electronic systems.</p>
+    </div>
+    <div class="journey">
+      <p class="section-kicker">Journey</p>
+      <ol>
+        {% for item in p.experience %}<li><span>{{ item.period }}</span><div><strong>{{ item.institution }}</strong><p>{{ item.detail }}</p></div></li>{% endfor %}
+        {% for item in p.education %}<li><span>{{ item.period }}</span><div><strong>{{ item.institution }}</strong><p>{{ item.detail }}</p></div></li>{% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section class="publications-section" id="publications">
+    <header class="publications-header"><div><p class="section-kicker">Selected publications</p><h2>Research archive</h2></div><p>Peer-reviewed articles, conference contributions, thesis, and open research data. Publication details are drawn from my ORCID record.</p></header>
+    <div class="featured-list">
+      {% for paper in selected %}
+      <article class="paper-row">
+        <span class="paper-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <div class="paper-main"><div class="paper-meta"><span>{{ paper.year }}</span><span>{{ paper.type }}</span></div><h3>{{ paper.title }}</h3>{% if paper.authors %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}<p class="paper-venue">{{ paper.venue }}</p></div>
+        {% if paper.doi %}<a class="doi-link" href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <details class="all-works"><summary><span>View complete ORCID works list</span><strong>{{ site.data.publications.size }} works</strong></summary><div class="archive-list">
+      {% for paper in site.data.publications %}<article><span class="archive-year">{{ paper.year }}</span><div><h3>{{ paper.title }}</h3><p>{{ paper.venue }} · {{ paper.type }}</p></div>{% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noreferrer">DOI ↗</a>{% else %}<span class="no-doi">Record</span>{% endif %}</article>{% endfor %}
+    </div></details>
+  </section>
+
+  <section class="contact-section" id="contact"><div><p class="section-kicker">Contact</p><h2>Let’s discuss machines,<br>models, and what’s next.</h2></div><div class="contact-links"><a href="mailto:{{ p.email }}"><span>Email</span><strong>{{ p.email }} ↗</strong></a><a href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noreferrer"><span>ORCID</span><strong>{{ p.orcid }} ↗</strong></a></div></section>
+</main>

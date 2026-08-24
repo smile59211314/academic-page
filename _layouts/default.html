@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101b18">
+    <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
+    {% seo %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>

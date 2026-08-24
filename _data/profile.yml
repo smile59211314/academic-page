@@ -1,0 +1,29 @@
+name: Zifeng Gong
+initials: ZG
+title: Lecturer
+department: School of Electrical and Control Engineering
+affiliation: North China University of Technology
+location: Beijing, China
+email: zifeng.gong@ncut.edu.cn
+orcid: 0000-0002-7494-9695
+portrait: /assets/images/photos/portrait.png
+bio: >-
+  I study how physics-informed models and data-driven methods can make electrical
+  machines more observable, reliable, and resilient.
+research_intro: >-
+  My work connects electromagnetic modelling, machine dynamics, and learning-based
+  representations to detect faults earlier and design more resilient control systems.
+education:
+  - period: 2021—2025
+    institution: KU Leuven
+    detail: PhD · Leuven, Belgium
+  - period: 2018—2021
+    institution: Southwest Jiaotong University
+    detail: Graduate education · Chengdu, China
+experience:
+  - period: 2026—Present
+    institution: North China University of Technology
+    detail: Lecturer · School of Electrical and Control Engineering
+  - period: 2024—Present
+    institution: Flanders Make
+    detail: Professional membership · Lommel, Belgium
