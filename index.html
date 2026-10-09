@@ -5,7 +5,8 @@ description: Academic homepage of Zifeng Gong, lecturer and researcher in electr
 ---
 
 {% assign p = site.data.profile %}
-{% assign selected = site.data.publications | where: "selected", true %}
+{% assign publications = site.data.publications | sort: "year" | reverse %}
+{% assign selected = publications | where: "selected", true %}
 
 <main>
   <section class="hero" id="top">
@@ -64,11 +65,17 @@ description: Academic homepage of Zifeng Gong, lecturer and researcher in electr
         {% for item in p.experience %}<li><span>{{ item.period }}</span><div><strong>{{ item.institution }}</strong><p>{{ item.detail }}</p></div></li>{% endfor %}
         {% for item in p.education %}<li><span>{{ item.period }}</span><div><strong>{{ item.institution }}</strong><p>{{ item.detail }}</p></div></li>{% endfor %}
       </ol>
+      <div class="honors-and-funding">
+        <p class="section-kicker">Honors &amp; funding</p>
+        <ol>
+          {% for item in p.honors_and_funding %}<li><span>{{ item.year }}</span><div><strong>{{ item.title | escape }}</strong><p>{{ item.detail | escape }}</p></div></li>{% endfor %}
+        </ol>
+      </div>
     </div>
   </section>
 
   <section class="publications-section" id="publications">
-    <header class="publications-header"><div><p class="section-kicker">Selected publications</p><h2>Research archive</h2></div><p>Peer-reviewed articles, conference contributions, thesis, and open research data. Publication details are drawn from my ORCID record.</p></header>
+    <header class="publications-header"><div><p class="section-kicker">Selected publications</p><h2>Research archive</h2></div><p>Peer-reviewed articles, conference contributions, thesis, and open research data. Records are cross-checked against publisher and institutional sources. Journal articles are listed by issue year where available.</p></header>
     <div class="featured-list">
       {% for paper in selected %}
       <article class="paper-row">
@@ -78,8 +85,8 @@ description: Academic homepage of Zifeng Gong, lecturer and researcher in electr
       </article>
       {% endfor %}
     </div>
-    <details class="all-works"><summary><span>View complete ORCID works list</span><strong>{{ site.data.publications.size }} works</strong></summary><div class="archive-list">
-      {% for paper in site.data.publications %}<article><span class="archive-year">{{ paper.year }}</span><div><h3>{{ paper.title }}</h3><p>{{ paper.venue }} · {{ paper.type }}</p></div>{% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noreferrer">DOI ↗</a>{% else %}<span class="no-doi">Record</span>{% endif %}</article>{% endfor %}
+    <details class="all-works"><summary><span>View all research works</span><strong>{{ site.data.publications.size }} works</strong></summary><div class="archive-list">
+      {% for paper in publications %}<article><span class="archive-year">{{ paper.year }}</span><div><h3>{{ paper.title }}</h3>{% if paper.authors %}<p class="paper-authors">{{ paper.authors | escape }}</p>{% endif %}<p>{{ paper.venue }} · {{ paper.type }}{% if paper.online_year and paper.online_year != paper.year %} · First online {{ paper.online_year }}{% endif %}</p></div>{% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noreferrer">DOI ↗</a>{% else %}<span class="no-doi">Record</span>{% endif %}</article>{% endfor %}
     </div></details>
   </section>
 

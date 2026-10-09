@@ -1,9 +1,10 @@
+# Journal articles use the issue year where available; online_year records an earlier online release.
 - year: 2026
   title: Data-Driven Reduced Order Modeling of Induction Motors Using Dynamic Mode Decomposition and Deep Koopman Theory
   venue: IEEE Transactions on Energy Conversion
   type: Journal article
   doi: 10.1109/TEC.2025.3599585
-  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, et al.
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Jeroen Boydens, Davy Pissoort
   selected: true
 - year: 2025
   title: Eccentricity fault modelling and diagnosis for induction machine condition monitoring
@@ -15,88 +16,98 @@
   venue: IEEE Transactions on Industrial Electronics
   type: Journal article
   doi: 10.1109/TIE.2024.3488354
-  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, et al.
+  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, Hans Hallez, Dries Vanoost
   selected: true
+- year: 2025
+  title: A Deep Ensemble Physics-Informed Koopman Operator for Fault-Tolerant Induction Motor Control
+  venue: 2025 Energy Conversion Congress and Expo Europe (ECCE Europe)
+  type: Conference paper
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Jeroen Boydens, Davy Pissoort
+- year: 2025
+  title: Data-Driven Model Identification of Unbalanced Induction Motor Dynamics and Forces using SINDYc
+  venue: 2025 Energy Conversion Congress and Expo Europe (ECCE Europe)
+  type: Conference paper
+  authors: Emma Vancayseele, Philip Desenfans, Zifeng Gong, Dries Vanoost, Herbert De Gersem, Davy Pissoort
 - year: 2024
   title: A Boundary-Preserving Non-Conformal Mapping for Radial Rotor Eccentricity in Finite Element Simulations of Electrical Machines
   venue: IEEE Transactions on Magnetics
   type: Journal article
   doi: 10.1109/TMAG.2024.3420813
-  authors: Philip Desenfans, Emma Vancayseele, Jonas Bundschuh, et al.
+  authors: Philip Desenfans, Emma Vancayseele, Jonas Bundschuh, Herbert De Gersem, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Davy Pissoort
   selected: true
 - year: 2024
   title: Comparison of Nonlinear Solution Methods for Magnetic Equivalent Circuits of Saturated Induction Motors
   venue: International Journal of Applied Electromagnetics and Mechanics
   type: Journal article
   doi: 10.3233/JAE-230237
-  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, et al.
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Jeroen Boydens, Herbert De Gersem, Davy Pissoort
 - year: 2024
   title: Modelling mechanical faults in induction motors using magnetic equivalent circuits and lumped-element shaft-bearing dynamics
   venue: Proceedings of ISMA2024 including USD2024
   type: Conference paper
-  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, et al.
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Davy Pissoort
 - year: 2024
   title: Improved Air Gap Permeance Modelling for Single-Slice Magnetic Equivalent Circuits of Skewed Induction Motors
   venue: COMPEL
   type: Journal article
   doi: 10.1108/COMPEL-11-2023-0573
-  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, et al.
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Jeroen Boydens, Herbert De Gersem, Davy Pissoort
   selected: true
 - year: 2024
   title: Multiphysics Coupling Model to Characterise the Behaviour of Induction Motors With Eccentricity and Bearing Faults
   venue: IEEE Transactions on Energy Conversion
   type: Journal article
   doi: 10.1109/TEC.2023.3305717
-  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, et al.
+  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, Hans Hallez, Dries Vanoost
   selected: true
-- year: 2023
+- year: 2024
   title: State-Space Model for Induction Motors with Static Eccentricity Faults
   venue: International Journal of Applied Electromagnetics and Mechanics
-  type: Research contribution
+  type: Journal article
   doi: 10.3233/JAE-230231
-  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, et al.
+  authors: Zifeng Gong, Philip Desenfans, Davy Pissoort, Hans Hallez, Dries Vanoost
+- year: 2024
+  title: Replication Data for Modelling mechanical faults in induction motors using magnetic equivalent circuits and lumped-element shaft-bearing dynamics
+  venue: KU Leuven Research Data Repository
+  type: Dataset
+  doi: 10.48804/GOQ7G7
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Davy Pissoort
+- year: 2024
+  online_year: 2023
+  title: The influence of the unbalanced magnetic pull on fault-induced rotor eccentricity in induction motors
+  venue: Journal of Vibration and Control
+  type: Journal article
+  doi: 10.1177/10775463231162908
+  authors: Philip Desenfans, Zifeng Gong, Dries Vanoost, Konstantinos Gryllias, Jeroen Boydens, Davy Pissoort
 - year: 2022
+  online_year: 2021
   title: Grid voltage sensor fault-tolerant control for single-phase two-level PWM rectifier
   venue: IET Electric Power Applications
   type: Journal article
   doi: 10.1049/elp2.12103
-  authors: Zifeng Gong, Deqing Huang, Lei Ma, Na Qin, et al.
+  authors: Zifeng Gong, Deqing Huang, Lei Ma, Na Qin, Habib Ullah Khan Jadoon
   selected: true
 - year: 2021
   title: Guaranteed Cost Optimal Control of High-speed Train with Time-delay in Cruise Phase
   venue: International Journal of Control, Automation and Systems
   type: Journal article
   doi: 10.1007/s12555-020-0189-z
+  authors: Xiangjin Tian, Deqing Huang, Na Qin, Zifeng Gong, Qingyuan Wang
 - year: 2021
   title: Sensor Fault Diagnosis and Unknown Disturbances Estimation of High Switching Frequency Single-phase PWM Rectifier
   venue: International Journal of Control, Automation and Systems
   type: Journal article
   doi: 10.1007/s12555-020-0334-8
+  authors: Habib Ullah Khan Jadoon, Deqing Huang, Na Qin, Zifeng Gong
 - year: 2020
   title: Sensor-Fault-Estimation-Based Tolerant Control for Single-Phase Two-Level PWM Rectifier in Electric Traction System
   venue: IEEE Transactions on Power Electronics
   type: Journal article
   doi: 10.1109/TPEL.2020.2982689
+  authors: Zifeng Gong, Deqing Huang, Habib Ullah Khan Jadoon, Lei Ma, Wensheng Song
 - year: 2019
   title: Fault Diagnosis and Tolerant Control for Sensors of PWM Rectifier Under High Switching Frequency
   venue: CAA Symposium on Fault Detection, Supervision and Safety for Technical Processes
   type: Conference paper
   doi: 10.1109/safeprocess45799.2019.9213426
-- year: Research
-  title: A Deep Ensemble Physics-Informed Koopman Operator for Fault-Tolerant Induction Motor Control
-  venue: Conference contribution
-  type: Conference paper
-- year: Research
-  title: Data-Driven Model Identification of Unbalanced Induction Motor Dynamics and Forces using SINDYc
-  venue: Conference contribution
-  type: Conference paper
-- year: Data
-  title: Replication Data for Modelling mechanical faults in induction motors using magnetic equivalent circuits and lumped-element shaft-bearing dynamics
-  venue: KU Leuven Research Data Repository
-  type: Dataset
-  doi: 10.48804/GOQ7G7
-- year: 2023
-  title: The influence of the unbalanced magnetic pull on fault-induced rotor eccentricity in induction motors
-  venue: Journal of Vibration and Control
-  type: Journal article
-  doi: 10.1177/10775463231162908
+  authors: Zifeng Gong, Habib Ullah Khan Jadoon, Deqing Huang, Na Qin, Lei Ma

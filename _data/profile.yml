@@ -27,3 +27,11 @@ experience:
   - period: 2024—Present
     institution: Flanders Make
     detail: Professional membership · Lommel, Belgium
+honors_and_funding:
+  - year: 2026
+    title: IEEE EMC Prize Paper Award
+    detail: Award recipient
+  - year: 2026
+    title: Beijing Funding Program for High-Level Overseas Returnees
+    detail: Selected for funding support for high-level overseas returnees
+    # English description of 北京市高层次留学人才回国资助项目; no official English name claimed.
